@@ -1,6 +1,7 @@
 import { Alert, Button, ImageBackground, StyleSheet, Text, TextInput, View,TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 
+
 export default function WelcomeScreen() {
 
   return (
@@ -29,9 +30,9 @@ const styles = StyleSheet.create({
   },
   input:{
     backgroundColor: "#666",
-    height: 50,
+    height: 55,
     width: "80%",
-    marginBottom: 10,
+    marginBottom: 15,
     borderRadius:40,
     paddingHorizontal: 25,
     fontSize: 30,

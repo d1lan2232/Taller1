@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   },
   btntexto:{
     color:'white',
-    fontSize:18,
+    fontSize:20,
   },
   welcome:{
     color:'black',

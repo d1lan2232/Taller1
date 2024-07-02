@@ -16,7 +16,7 @@ function MyDrawer() {
     <Drawer.Navigator>
       <Drawer.Screen name="Login" component={LoginScreen} />
       <Drawer.Screen name="Registro" component={RegistroScreen} />
-
+    
     </Drawer.Navigator>
   );
 }

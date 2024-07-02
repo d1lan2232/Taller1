@@ -17,7 +17,8 @@ function MyDrawer() {
     <Drawer.Navigator>
       <Drawer.Screen name="Login" component={LoginScreen} />
       <Drawer.Screen name="Registro" component={RegistroScreen} />
-      <Drawer.Screen name="Welcome" component={WelcomeScreen} />
+      <Drawer.Screen name="Welcome" component={WelcomeScreen} options={{headerShown:false}}/>
+      <Stack.Screen name="Score" component={ScoreScreen} />
     </Drawer.Navigator>
   );
 }
@@ -42,4 +43,7 @@ export default function Navegator(){
         </NavigationContainer>
     )
 }
+
+
+
 

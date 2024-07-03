@@ -16,6 +16,7 @@ const Drawer = createDrawerNavigator();
 function MyDrawer() {
   return (
     <Drawer.Navigator>
+      <Stack.Screen name="Welcome" component={WelcomeScreen} />
       <Drawer.Screen name="Login" component={LoginScreen} />
       <Drawer.Screen name="Registro" component={RegistroScreen} />
       <Drawer.Screen name="Game" component={GameScreen} />

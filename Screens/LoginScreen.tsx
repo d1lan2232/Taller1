@@ -1,5 +1,5 @@
+import React = require('react');
 import { ImageBackground, StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native';
-import React from 'react'
 import { TextInput } from 'react-native-gesture-handler';
 
 export default function LoginScreen() {

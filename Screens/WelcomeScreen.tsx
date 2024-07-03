@@ -2,7 +2,7 @@ import { Alert, Button, ImageBackground, StyleSheet, Text, TextInput, View,Touch
 import React, { useState } from 'react'
 
 
-export default function WelcomeScreen() {
+export default function WelcomeScreen({navigation}:any) {
 
   return (
     <ImageBackground 
@@ -12,9 +12,9 @@ export default function WelcomeScreen() {
       <Text style={styles.welcome}>Bienvenidos</Text>
       <View style={styles.btncontainer}>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.btntexto}>Registrarse</Text>
+        <Text style={styles.btntexto} onPress={()=>navigation.navigate('Registro')}>Registrarse</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={()=>navigation.navigate('Login')}>
         <Text style={styles.btntexto}>Iniciar Sesión</Text>
       </TouchableOpacity>
       </View>

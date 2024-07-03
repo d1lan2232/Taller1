@@ -1,63 +1,79 @@
-import { Button, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Button, ImageBackground, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
 import { TextInput } from 'react-native-gesture-handler';
-
-
 
 export default function RegistroScreen() {
   return (
+    <ImageBackground
+      source={{ uri: 'https://t3.ftcdn.net/jpg/00/88/98/18/360_F_88981880_YjJManMJ6hJmKr5CZteFJAkEzXIh8mxW.jpg' }}
+      style={styles.imagen}
+    >
+      <View style={styles.container}>
+        <Text style={styles.title}>Registro</Text>
 
-   <View style={styles.container}>
-      
-      <Text style={{ fontSize: 45, }}>Registro</Text>
-      <TextInput placeholder='Ingrese correo'
-        style={styles.input}
-        placeholderTextColor={'#ffe'}
-        keyboardType='email-address'
-        >
-      </TextInput>
+        <TextInput
+          placeholder='Ingrese correo'
+          style={styles.input}
+          placeholderTextColor={'#ffe'}
+          keyboardType='email-address'
+        />
 
-      <TextInput placeholder='Ingrese contraseña'
-        style={styles.input}
-        placeholderTextColor={'#ffe'}
-        secureTextEntry={true}
-        ></TextInput>
+        <TextInput
+          placeholder='Ingrese contraseña'
+          style={styles.input}
+          placeholderTextColor={'#ffe'}
+          secureTextEntry={true}
+        />
 
-      <TextInput placeholder='Ingrese Nick'
-        style={styles.input}
-        placeholderTextColor={'#ffe'}
-        ></TextInput>
+        <TextInput
+          placeholder='Ingrese Nick'
+          style={styles.input}
+          placeholderTextColor={'#ffe'}
+        />
 
-      <TextInput placeholder='Ingrese Edad'
-        style={styles.input}
-        placeholderTextColor={'#ffe'}
-        keyboardType='numeric'
-        ></TextInput>
+        <TextInput
+          placeholder='Ingrese Edad'
+          style={styles.input}
+          placeholderTextColor={'#ffe'}
+          keyboardType='numeric'
+        />
 
-      <Button title='Guardar' ></Button>
-    </View>
+        <Button title='Guardar' color={styles.boton.color} />
+      </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '##50ede2',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'rgba(0, 55, 27, 0.8)', 
+  },
+  title: {
+    fontSize: 45,
+    color: 'white',
+    marginBottom: 20,
   },
   input: {
-    backgroundColor: '#a5b3f8',
-    height: 60,
-    fontSize: 25,
+    backgroundColor: 'gray',
+    height: 50,
     width: '80%',
-    marginTop: 10,
-    borderRadius: 20,
-    paddingHorizontal: 30,
-    color: '#0018A8',
+    margin: 10,
+    padding: 10,
+    borderColor: 'black',
+    borderWidth: 3,
+    borderRadius: 25,
+    textAlign: 'center',
+    borderBottomWidth: 5,
+    fontSize: 18,
   },
-  img: {
-    width: 100,
-    height: 100,
-  }
+  boton: {
+    color: '#00bfff',
+  },
+  imagen: {
+    flex: 1,
+    resizeMode: 'cover',
+  },
 });

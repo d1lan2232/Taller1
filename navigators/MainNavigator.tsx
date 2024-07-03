@@ -16,7 +16,6 @@ function MyDrawer() {
     <Drawer.Navigator>
       <Drawer.Screen name="Login" component={LoginScreen} />
       <Drawer.Screen name="Registro" component={RegistroScreen} />
-    
     </Drawer.Navigator>
   );
 }
@@ -26,9 +25,9 @@ const Stack = createStackNavigator();
 function MyStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Login" component={LoginScreen} />
-      <Stack.Screen name="Registro" component={RegistroScreen} />
-      <Stack.Screen name="Score" component={ScoreScreen}/>
+      <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false}}/>
+      <Stack.Screen name="Registro" component={RegistroScreen} options={{headerShown: false}}/>
+      <Stack.Screen name="Score" component={ScoreScreen} options={{headerShown: false}}/>
     </Stack.Navigator>
   );
 }

@@ -14,27 +14,24 @@ export default function RegistroScreen() {
         <TextInput
           placeholder='Ingrese correo'
           style={styles.input}
-          placeholderTextColor={'#ffe'}
           keyboardType='email-address'
         />
 
         <TextInput
           placeholder='Ingrese contraseña'
           style={styles.input}
-          placeholderTextColor={'#ffe'}
           secureTextEntry={true}
         />
 
         <TextInput
           placeholder='Ingrese Nick'
           style={styles.input}
-          placeholderTextColor={'#ffe'}
+
         />
 
         <TextInput
           placeholder='Ingrese Edad'
           style={styles.input}
-          placeholderTextColor={'#ffe'}
           keyboardType='numeric'
         />
 
@@ -57,7 +54,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   input: {
-    backgroundColor: 'gray',
+    backgroundColor: 'white',
     height: 50,
     width: '80%',
     margin: 10,

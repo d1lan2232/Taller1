@@ -9,6 +9,7 @@ import LoginScreen from '../Screens/LoginScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import RegistroScreen from '../Screens/RegistroScreen';
 import ScoreScreen from '../Screens/ScoreScreen';
+import GameScreen from '../Screens/GameScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -17,7 +18,7 @@ function MyDrawer() {
     <Drawer.Navigator>
       <Drawer.Screen name="Login" component={LoginScreen} />
       <Drawer.Screen name="Registro" component={RegistroScreen} />
-      <Drawer.Screen name="Welcome" component={WelcomeScreen} options={{headerShown:false}}/>
+      <Drawer.Screen name="Game" component={GameScreen} />
       <Stack.Screen name="Score" component={ScoreScreen} />
     </Drawer.Navigator>
   );
@@ -30,6 +31,7 @@ function MyStack() {
     <Stack.Navigator>
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Registro" component={RegistroScreen} />
+      <Stack.Screen name="Game" component={GameScreen} />
       <Stack.Screen name="Score" component={ScoreScreen}/>
     </Stack.Navigator>
   );

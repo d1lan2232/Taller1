@@ -1,4 +1,4 @@
-import React = require('react');
+import React from 'react';
 import { ImageBackground, StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 

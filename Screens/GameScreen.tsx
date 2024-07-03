@@ -3,14 +3,21 @@ import React from 'react'
 import { WebView } from 'react-native-webview';
 
 export default function GameScreen() {
-  const localHtmlFile = require('../assets/pacman.html');
+  const localHtmlFile = require('../Game/pacman.html');
   return (
     <WebView
     originWhitelist={['*']}
       source={localHtmlFile}
-      style={{ flex: 1 }}
+      style={styles.pacman}
     />
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  pacman:{
+    width: "100%",
+    height: "100%",
+    flex: 2,
+    backgroundColor: "rgba (0, 55, 27, 0.8)"
+  }
+})

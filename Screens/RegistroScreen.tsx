@@ -2,7 +2,7 @@ import { Button, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { TextInput } from 'react-native-gesture-handler';
 
-export default function RegistroScreen() {
+export default function RegistroScreen({navigation}:any) {
   return (
     <ImageBackground
       source={{ uri: 'https://t3.ftcdn.net/jpg/00/88/98/18/360_F_88981880_YjJManMJ6hJmKr5CZteFJAkEzXIh8mxW.jpg' }}
@@ -35,7 +35,7 @@ export default function RegistroScreen() {
           keyboardType='numeric'
         />
 
-        <Button title='Guardar' color={styles.boton.color} />
+        <Button title='Guardar' color={styles.boton.color} onPress={()=>navigation.navigate('Login')}/>
       </View>
     </ImageBackground>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 import { ImageBackground, StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 
-export default function LoginScreen() {
+export default function LoginScreen({navigation}:any) {
   return (
     
   <ImageBackground
@@ -20,7 +20,7 @@ export default function LoginScreen() {
       placeholder='Ingrese su contraseña'
       style={styles.input}/>
  
-      <Button title='Ingresar' />
+      <Button title='Ingresar' onPress={()=>navigation.navigate('Game')}/>
     </View>
 
     </ImageBackground>

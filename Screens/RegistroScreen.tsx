@@ -19,7 +19,7 @@ export default function RegistroScreen({navigation}:any) {
     password : contrasena,
     age: edad
   });
-  Alert.alert ("Mensaje", "Informacion guardada");
+  Alert.alert ("Mensaje", "La Informacion fue guardada exitosamente");
   setcorreo("");
   setcontrasena("");
   setnick("");
@@ -36,7 +36,7 @@ export default function RegistroScreen({navigation}:any) {
         <Text style={styles.title}>Registro</Text>
 
         <TextInput
-          placeholder='Ingrese correo'
+          placeholder='Ingrese el correo electronico'
           onChangeText={(texto) => setcorreo(texto)}
           value={correo}
           style={styles.input}
@@ -44,7 +44,7 @@ export default function RegistroScreen({navigation}:any) {
         />
 
         <TextInput
-          placeholder='Ingrese contraseña'
+          placeholder='Ingrese su contraseña'
           onChangeText={(texto) => setcontrasena(texto)}
           value={contrasena}
           style={styles.input}
@@ -52,7 +52,7 @@ export default function RegistroScreen({navigation}:any) {
         />
 
         <TextInput
-          placeholder='Ingrese Nick'
+          placeholder='Ingrese el Nick'
           onChangeText={(texto) => setnick(texto)}
           value={nick}
           style={styles.input}

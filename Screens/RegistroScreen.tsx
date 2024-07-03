@@ -1,8 +1,32 @@
-import { Button, ImageBackground, StyleSheet, Text, View } from 'react-native';
-import React from 'react';
+import { Alert, Button, ImageBackground, StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
 import { TextInput } from 'react-native-gesture-handler';
+import { getDatabase, ref, set } from "firebase/database";
+import { db } from '../config/Config';
 
 export default function RegistroScreen({navigation}:any) {
+
+  const [correo, setcorreo] = useState("")
+  const [contrasena, setcontrasena] = useState("")
+  const [nick, setnick] = useState("")
+  const [edad, setedad] = useState("")
+
+  //Guardar usuarios 
+  function guardarUsuarios() {
+  set(ref(db, 'users/' + nick), {
+    username: nick,
+    email: correo,
+    password : contrasena,
+    age: edad
+  });
+  Alert.alert ("Mensaje", "Informacion guardada");
+  setcorreo("");
+  setcontrasena("");
+  setnick("");
+  setedad("");
+}
+
+
   return (
     <ImageBackground
       source={{ uri: 'https://t3.ftcdn.net/jpg/00/88/98/18/360_F_88981880_YjJManMJ6hJmKr5CZteFJAkEzXIh8mxW.jpg' }}
@@ -13,29 +37,38 @@ export default function RegistroScreen({navigation}:any) {
 
         <TextInput
           placeholder='Ingrese correo'
+          onChangeText={(texto) => setcorreo(texto)}
+          value={correo}
           style={styles.input}
           keyboardType='email-address'
         />
 
         <TextInput
           placeholder='Ingrese contraseña'
+          onChangeText={(texto) => setcontrasena(texto)}
+          value={contrasena}
           style={styles.input}
           secureTextEntry={true}
         />
 
         <TextInput
           placeholder='Ingrese Nick'
+          onChangeText={(texto) => setnick(texto)}
+          value={nick}
           style={styles.input}
 
         />
 
         <TextInput
-          placeholder='Ingrese Edad'
+          placeholder='Ingrese su Edad'
           style={styles.input}
           keyboardType='numeric'
+          onChangeText={(texto) => setedad(texto)}
+          value={edad}
         />
 
-        <Button title='Guardar' color={styles.boton.color} onPress={()=>navigation.navigate('Login')}/>
+        <Button title='Guardar' color={styles.boton.color} 
+        onPress={() => {guardarUsuarios(); navigation.navigate('Login')}}/>
       </View>
     </ImageBackground>
   );

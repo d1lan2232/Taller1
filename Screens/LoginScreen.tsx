@@ -14,7 +14,7 @@ export default function LoginScreen({navigation}:any) {
       <Text style={styles.titulo}>Login</Text>
 
       <TextInput
-      placeholder='Ingrese su usuario'
+      placeholder='Ingrese su nick'
       style={styles.input}/>
       <TextInput
       placeholder='Ingrese su contraseña'

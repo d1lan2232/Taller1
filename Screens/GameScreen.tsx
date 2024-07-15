@@ -1,4 +1,4 @@
-import { Platform, StyleSheet, Text, View } from 'react-native'
+import { Button, Platform, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { WebView } from 'react-native-webview';
 
@@ -10,6 +10,7 @@ export default function GameScreen() {
       source={localHtmlFile}
       style={styles.pacman}
     />
+
   )
 }
 

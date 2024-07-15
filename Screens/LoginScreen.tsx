@@ -18,7 +18,8 @@ export default function LoginScreen({navigation}:any) {
       style={styles.input}/>
       <TextInput
       placeholder='Ingrese su contraseña'
-      style={styles.input}/>
+      style={styles.input}
+      secureTextEntry={true}/>
  
       <Button title='Ingresar' onPress={()=>navigation.navigate('Game')}/>
     </View>
